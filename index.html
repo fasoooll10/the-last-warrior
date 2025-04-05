@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Last Warrior - Prototype</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container" id="home-screen">
+    <h1>The Last Warrior</h1>
+    <label for="playerCount">اختر عدد اللاعبين:</label>
+    <select id="playerCount">
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+    <button id="startGameBtn">بدء اللعب</button>
+  </div>
+
+  <div class="container hidden" id="setup-screen">
+    <h2>توزيع الكروت</h2>
+    <p>سيتم توزيع كروت الشخصيات والمساعدة على اللاعبين</p>
+    <button id="goToBoardBtn">الذهاب للساحة</button>
+  </div>
+
+  <div class="container hidden" id="game-board">
+    <h2>ساحة اللعب</h2>
+    <div id="playersArea">
+      <!-- هنا سيتم عرض اللاعبين وكروتهم -->
+    </div>
+    <div id="actionsArea">
+      <button id="rollDiceBtn">ارمِ النرد</button>
+      <!-- مثال لاستخدام كروت المساعدة -->
+      <button id="useHelpCardBtn">استخدم كرت مساعدة</button>
+    </div>
+    <div id="gameLog"></div>
+  </div>
+
+  <div class="container hidden" id="result-screen">
+    <h2>النتائج</h2>
+    <div id="scoreBoard"></div>
+    <button id="nextRoundBtn">الجولة التالية</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
