@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>بطاقة تفاعلية</title>
+  <link rel="stylesheet" href="card.css">
+</head>
+<body>
+
+<div class="card-container" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="king-north.jpg" alt="King of North" class="card-image">
+      <div class="card-info">
+        <h2>ملك الشمال</h2>
+        <p>الأرواح: 3</p>
+        <p>النرد: 2x6</p>
+      </div>
+    </div>
+    <div class="card-back">
+      <h3>بطاقة مخفية</h3>
+      <p>انقر للكشف</p>
+    </div>
+  </div>
+</div>
+
+<script src="card.js"></script>
+</body>
