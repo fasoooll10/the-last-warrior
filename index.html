@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>The Last Warrior - Prototype</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Last Warrior</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <div class="container" id="home-screen">
+  <div class="container">
     <h1>The Last Warrior</h1>
-    <label for="playerCount">اختر عدد اللاعبين:</label>
-    <select id="playerCount">
+    <label for="players">اختر عدد اللاعبين:</label>
+    <select id="players">
       <option value="3">3</option>
       <option value="4">4</option>
       <option value="5">5</option>
@@ -20,34 +20,22 @@
       <option value="9">9</option>
       <option value="10">10</option>
     </select>
-    <button id="startGameBtn">بدء اللعب</button>
-  </div>
+    <button onclick="startGame()">بدء اللعب</button>
 
-  <div class="container hidden" id="setup-screen">
-    <h2>توزيع الكروت</h2>
-    <p>سيتم توزيع كروت الشخصيات والمساعدة على اللاعبين</p>
-    <button id="goToBoardBtn">الذهاب للساحة</button>
-  </div>
-
-  <div class="container hidden" id="game-board">
-    <h2>ساحة اللعب</h2>
-    <div id="playersArea">
-      <!-- هنا سيتم عرض اللاعبين وكروتهم -->
+    <div id="gameArea" class="hidden">
+      <h2>مقدمة عن اللعبة</h2>
+      <p>
+        لعبة بطاقات استراتيجية بين أربع قبائل (الشمال، الجنوب، الشرق، الغرب).
+        في كل قبيلة 4 شخصيات: الملك، الوزير، الجنرال، والجندي. لكل شخصية خصائص
+        من حيث عدد الأرواح والنرد المستخدم. يتم توزيع 5 كروت شخصيات و3 كروت
+        مساعدة لكل لاعب، وتُلعب 5 جولات في كل جولة تُستخدم ورقة واحدة فقط.
+      </p>
+      <p>
+        يتم حساب النقاط حسب القبيلة الفائزة. أول لاعب يصل إلى 10 نقاط هو
+        الفائز. يمكن الاتفاق مسبقًا على عدد نقاط مختلف.
+      </p>
+      <p>مزيد من التفاصيل سيتم إضافتها لاحقاً.</p>
     </div>
-    <div id="actionsArea">
-      <button id="rollDiceBtn">ارمِ النرد</button>
-      <!-- مثال لاستخدام كروت المساعدة -->
-      <button id="useHelpCardBtn">استخدم كرت مساعدة</button>
-    </div>
-    <div id="gameLog"></div>
   </div>
-
-  <div class="container hidden" id="result-screen">
-    <h2>النتائج</h2>
-    <div id="scoreBoard"></div>
-    <button id="nextRoundBtn">الجولة التالية</button>
-  </div>
-
   <script src="game.js"></script>
 </body>
-</html>
