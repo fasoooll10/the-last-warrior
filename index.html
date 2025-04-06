@@ -1,41 +1,28 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Last Warrior</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Warrior</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>The Last Warrior</h1>
-    <label for="players">اختر عدد اللاعبين:</label>
-    <select id="players">
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10">10</option>
-    </select>
-    <button onclick="startGame()">بدء اللعب</button>
-
-    <div id="gameArea" class="hidden">
-      <h2>مقدمة عن اللعبة</h2>
-      <p>
-        لعبة بطاقات استراتيجية بين أربع قبائل (الشمال، الجنوب، الشرق، الغرب).
-        في كل قبيلة 4 شخصيات: الملك، الوزير، الجنرال، والجندي. لكل شخصية خصائص
-        من حيث عدد الأرواح والنرد المستخدم. يتم توزيع 5 كروت شخصيات و3 كروت
-        مساعدة لكل لاعب، وتُلعب 5 جولات في كل جولة تُستخدم ورقة واحدة فقط.
-      </p>
-      <p>
-        يتم حساب النقاط حسب القبيلة الفائزة. أول لاعب يصل إلى 10 نقاط هو
-        الفائز. يمكن الاتفاق مسبقًا على عدد نقاط مختلف.
-      </p>
-      <p>مزيد من التفاصيل سيتم إضافتها لاحقاً.</p>
+    <div class="container">
+        <h1>The Last Warrior</h1>
+        <label for="players">اختر عدد اللاعبين:</label>
+        <select id="players">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <button onclick="startGame()">بدء اللعب</button>
+        <div id="gameArea" class="hidden"></div>
     </div>
-  </div>
-  <script src="game.js"></script>
+    <script src="game.js"></script>
 </body>
+</html>
